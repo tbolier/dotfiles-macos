@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Add the brew bin folder to the PATH variable.
+export PATH="/usr/local/sbin:$PATH"
+
 # Install command-line tools.
 xcode-select --install
 
