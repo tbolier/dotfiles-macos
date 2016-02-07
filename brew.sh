@@ -76,6 +76,7 @@ brew cask install phpstorm
 brew cask install puppet
 brew cask install real-vnc
 brew cask install sequel-pro
+brew cask install slack
 brew cask install sourcetree
 brew cask install spectacle
 brew cask install spotify
