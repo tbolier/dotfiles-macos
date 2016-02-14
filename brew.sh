@@ -3,14 +3,14 @@
 # Add the brew bin folder to the PATH variable.
 export PATH="/usr/local/sbin:$PATH"
 
-# Install command-line tools.
-xcode-select --install
-
 # Ask for the administrator password upfront.
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Install command-line tools.
+xcode-select --install
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -51,7 +51,7 @@ brew install git
 brew install autoconf
 # Install other useful binaries.
 brew install freetype jpeg libpng gd zlib
-brew install brew-cask
+brew install cask
 brew install gettext
 brew install libxml2
 brew install composer
