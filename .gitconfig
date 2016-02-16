@@ -12,6 +12,7 @@
 [core]
 	excludesfile = /Users/timon/.gitignore_global
 	autocrlf = input
+	ignorecase = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
