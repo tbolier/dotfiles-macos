@@ -6,7 +6,8 @@ alias jumphost='ssh t.bolier@nlam01-vmjump01.servers.coolblue.nl'
 
 alias pup='cd ~/Projects/Puppet/puppet-coolblue-core'
 
-alias git-rebase-master='git checkout master;git fetch --all;git rebase upstream/master'
+alias git-rebase-origin='git checkout master;git fetch --all;git rebase origin/master'
+alias git-rebase-upstream='git checkout master;git fetch --all;git rebase upstream/master'
 
 alias vu-webshop='cd ~/Projects/Puppet/puppet-coolblue-core;vagrant up webshop'
 alias vp-webshop='cd ~/Projects/Puppet/puppet-coolblue-core;vagrant provision webshop'
