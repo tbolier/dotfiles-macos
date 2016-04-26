@@ -3,6 +3,9 @@
 # Location of casks
 CASKROOM = '/opt/homebrew-cask/Caskroom/'
 
+# Brew / cask cleanup & update
+system("brew cleanup && brew cask cleanup && brew update && brew cask update")
+
 # Go through installed casks.
 Dir.foreach(CASKROOM) do |cask_name|
   # Ignore hidden files/directories (i.e. '..' and '.', although someone could
@@ -33,3 +36,5 @@ Dir.foreach(CASKROOM) do |cask_name|
   system("brew cask uninstall #{cask_name}")
   system("brew cask install #{cask_name}")
 end
+
+system("brew cleanup && brew cask cleanup")
