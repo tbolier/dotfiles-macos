@@ -44,6 +44,7 @@ brew install openssh
 brew install screen
 # https://github.com/Homebrew/homebrew-php
 brew install php56 --with-debug --with-gmp --with-pear
+brew install php56-intl
 pear install PHP_CodeSniffer
 brew install zsh zsh-completions
 brew install git
