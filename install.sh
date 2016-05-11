@@ -12,8 +12,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install command-line tools.
 xcode-select --install
 
+# Remove outdated versions from the cellar.
+brew cleanup && brew cask cleanup
+
 # Make sure we’re using the latest Homebrew.
-brew update
+brew update && brew cask update
 
 # Upgrade any already-installed formulae.
 brew upgrade --all
@@ -86,6 +89,7 @@ brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install vagrant
 brew cask install virtualbox
+brew cask install whatsapp
 
 # Remove outdated versions from the cellar.
 brew cleanup && brew cask cleanup
