@@ -69,6 +69,7 @@ brew cask install appzapper
 brew cask install caffeine
 brew cask install ccleaner
 brew cask install dash
+brew cask install flinto
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install google-hangouts
