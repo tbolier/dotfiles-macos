@@ -64,33 +64,22 @@ brew install openssl
 
 # Install applications
 brew cask install 1password
-brew cask install alfred
-brew cask install appzapper
-brew cask install caffeine
-brew cask install ccleaner
+brew cask install alfred appzapper
+brew cask install caffeine ccleaner
 brew cask install dash
 brew cask install flinto
-brew cask install google-chrome
-brew cask install google-drive
-brew cask install google-hangouts
-brew cask install hipchat
+brew cask install google-chrome google-drive google-hangouts
 brew cask install iterm2
 brew cask install java
 brew cask install node
-brew cask install paw
-brew cask install phpstorm
-# brew cask install puppet
-brew cask install real-vnc
-brew cask install sequel-pro
-brew cask install slack
-brew cask install sourcetree
-brew cask install spectacle
-brew cask install spotify
-brew cask install sublime-text
+brew cask install paw phpstorm
+brew cask install sequel-pro slack sourcetree spectacle spotify sublime-text
 brew cask install the-unarchiver
-brew cask install vagrant
-brew cask install virtualbox
+brew cask install vagrant virtualbox vnc-viewer
 brew cask install whatsapp
+
+# Remove applications
+brew cask zap hipchat puppet real-vnc
 
 # Remove outdated versions from the cellar.
 brew cleanup && brew cask cleanup
