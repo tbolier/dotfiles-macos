@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # OSX Lion ssh logon:
 # -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8)
 export LC_CTYPE="en_US.UTF-8"
@@ -23,15 +21,19 @@ alias commit='_gitCommit'
 
 _gitCommit ()
 {
-    branchFeature="${$(branch)##*/}"
-    echo $branchFeature
-    if [ "$branchFeature" = "master" ]; then
-        read branchFeature
+    issueKey="${$(branch)##*/}"
+    if [ "$issueKey" = "master" ]; then
+        echo "Enter your issue key:"
+        read issueKey
     fi
-    git commit -m "[${branchFeature}] ${1}"
+
+    if [ ! -z "$issueKey" ]; then
+        git commit -m "[${issueKey}] ${1}"
+    else
+        git commit -m "${1}"
+    fi
 }
 
 # Projects
 alias projects='cd ~/Projects'
 
-# Git
