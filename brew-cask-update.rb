@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Location of casks
-CASKROOM = '/opt/homebrew-cask/Caskroom/'
+CASKROOM = '/usr/local/Caskroom/'
 
 # Brew / cask cleanup & update
 system("brew cleanup && brew cask cleanup && brew update && brew cask update")
