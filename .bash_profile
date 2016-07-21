@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # OSX Lion ssh logon:
 # -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8)
 export LC_CTYPE="en_US.UTF-8"
@@ -17,7 +19,17 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 alias branch='git rev-parse --abbrev-ref HEAD'
 alias rebase='function(){git fetch --all;git rebase -i $1}'
 alias fetch='function(){git fetch --all}'
-alias commit='function(){git commit -m "[${branch}] ${1}"}'
+alias commit='_gitCommit'
+
+_gitCommit ()
+{
+    branchFeature="${$(branch)##*/}"
+    echo $branchFeature
+    if [ "$branchFeature" = "master" ]; then
+        read branchFeature
+    fi
+    git commit -m "[${branchFeature}] ${1}"
+}
 
 # Projects
 alias projects='cd ~/Projects'
