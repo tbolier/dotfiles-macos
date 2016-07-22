@@ -79,7 +79,9 @@ brew cask install vagrant virtualbox vnc-viewer
 brew cask install whatsapp
 
 # Remove applications
-sudo brew cask zap hipchat puppet real-vnc
+sudo brew cask zap hipchat
+sudo brew cask zap puppet
+sudo brew cask zap real-vnc
 
 # Remove outdated versions from the cellar.
 brew cleanup && brew cask cleanup
