@@ -66,8 +66,7 @@ brew install openssl
 brew cask install 1password
 brew cask install alfred appzapper
 brew cask install caffeine ccleaner
-brew cask install dash
-brew cask install flinto
+brew cask install dash datagrip
 brew cask install google-chrome google-drive google-hangouts
 brew cask install iterm2
 brew cask install java
@@ -79,6 +78,7 @@ brew cask install vagrant virtualbox vnc-viewer
 brew cask install whatsapp
 
 # Remove applications
+sudo brew cask zap flinto
 sudo brew cask zap hipchat
 sudo brew cask zap puppet
 sudo brew cask zap real-vnc
