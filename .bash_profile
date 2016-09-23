@@ -2,6 +2,8 @@
 # -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8)
 export LC_CTYPE="en_US.UTF-8"
 
+source $(brew --prefix php-version)/php-version.sh
+
 # Composer
 alias cinstall='composer install'
 alias cupdate='function(){composer update $1}'
@@ -36,4 +38,3 @@ _gitCommit ()
 
 # Projects
 alias projects='cd ~/Projects'
-

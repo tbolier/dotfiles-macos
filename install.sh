@@ -38,29 +38,46 @@ brew tap homebrew/versions
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install more recent versions of some OS X tools.
 brew tap homebrew/dupes
 brew tap homebrew/homebrew-php
 brew install vim --override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-# https://github.com/Homebrew/homebrew-php
-brew install php56 --with-debug --with-gmp --with-pear
-brew install php56-intl
-pear install PHP_CodeSniffer
 brew install zsh zsh-completions
 brew install git
-
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install autoconf
-# Install other useful binaries.
 brew install freetype jpeg libpng gd zlib
 brew install cask
 brew install gettext
 brew install libxml2
 brew install composer
 brew install openssl
+
+# PHP Configuation
+brew unlink php56 php70 php71
+
+brew install php-version
+
+brew install php56 --with-pear php56-xdebug php56-intl && pear install PHP_CodeSniffer
+pear install PHP_CodeSniffer
+brew unlink php56
+
+brew install php70 --with-pear php70-xdebug php56-intl && pear install PHP_CodeSniffer
+pear install PHP_CodeSniffer
+brew unlink php70
+
+brew install php71 --with-pear php71-xdebug php56-intl && pear install PHP_CodeSniffer
+
+php-version 5 # switch to PHP5
+
+# Node configuration
+curl -L http://git.io/n-install | bash
+n latest # install latest version of node
+
+# Install NPM
+curl -L https://www.npmjs.com/install.sh | sh
 
 # Install applications
 brew cask install 1password
@@ -70,7 +87,6 @@ brew cask install dash datagrip
 brew cask install google-chrome google-drive google-hangouts
 brew cask install iterm2
 brew cask install java
-brew cask install node
 brew cask install paw phpstorm
 brew cask install sequel-pro slack sourcetree spectacle spotify sublime-text
 brew cask install the-unarchiver
