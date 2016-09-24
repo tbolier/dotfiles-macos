@@ -1,42 +1,71 @@
 # Timon’s dotfiles
 
-Feel free to use.
+Welcome to my dotfiles.<br />
+Feel free to use, but before you do read this README.
 
-## Installation
+Have tips or changes? Submit a pull request.
 
-### Using Git and the bootstrap script
+## Dependencies before installing
+- Homebrew
+- macOS
+- Ruby
 
-You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+## Dotfiles:
+- Bash profile aliases
+- Git config
+- Vim config
+- Z shell
+- Z shell config
 
+## Install script warnings
+- The install script (full installation) will forcefully run all the partial scripts.
+- Install brew packages, casks and execute other scripts.
+- After you have forked the repository, update your credentials in ./files/.gitconfig
+- Feel brave enough? Go ahead and read on.
+
+## Install script features
+- Install brew packages script.
+- Install brew casks script.
+- Update script for installed brew casks.
+- Install PHP + php-version switcher.
+- Install Node.JS + n version switcher and NPM.
+
+## Not part of install script
+- Airwatch fix "reboot issue" script (not part of full installation).
+
+### Full installation
 ```bash
-git clone https://github.com/tbolier/dotfiles.git && cd dotfiles && source bootstrap.sh
+# Using git
+git clone https://github.com/tbolier/dotfiles.git && cd dotfiles && ./install
+
+# Already checked out?
+./install
 ```
 
-To update, `cd` into your local `dotfiles` repository and then:
+## Partial installation
 
 ```bash
-source bootstrap.sh
+# Script to fix the reboot issue.
+./scripts/brew-install
 
-Alternatively, to update while avoiding the confirmation prompt:
+# Script for installing my brew packages.
+./scripts/brew-install
 
-```bash
-set -- -f; source bootstrap.sh
-```
+# Script for installing my casks.
+./scripts/brew-cask-install
 
-### Git-free install
+# Script for updating installed casks.
+./scripts/brew-cask-update
 
-To install these dotfiles without Git:
+# Script for installing my dotfiles.
+./scripts/dotfiles
 
-```bash
-cd; curl -#L https://github.com/tbolier/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh}
-```
+# Script for installing brew packages.
+./scripts/brew-install
 
-To update later on, just run that command again.
+# Script for installing PHP + php-version.
+./scripts/brew-install-php
 
-### Install Homebrew formulae
-
-When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
-
-```bash
-./brew.sh
+# Script for installing n + Node.js and NPM.
+./scripts/install-node
 ```

@@ -13,21 +13,21 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 xcode-select --install
 
 # Install dotfiles
-./scripts/dotfiles.sh --force
+./scripts/dotfiles --force
 
 # Remove outdated versions from the cellar and update brew.
 brew cleanup && brew update
 
-./scripts/brew-install.sh
-./scripts/brew-install-php.sh
-./scripts/install-node.sh
+./scripts/brew-install
+./scripts/brew-install-php
+./scripts/install-node
 
 # Remove outdated casks from the cellar and update cask.
 brew cask cleanup && brew cask update
 
 # Upgrade all existing casks
-./scripts/brew-cask-update.rb
-./scripts/brew-cask-install.sh
+./scripts/brew-cask-update
+./scripts/brew-cask-install
 
 # Remove outdated versions from the cellars.
 brew cleanup && brew cask cleanup
