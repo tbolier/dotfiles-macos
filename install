@@ -33,5 +33,5 @@ brew cask cleanup && brew cask update
 brew cleanup && brew cask cleanup
 
 if [ -f "$HOME/.zshrc" ]; then
-    source "$HOME/.zshrc";
+    source "$HOME/.bash_profile";
 fi

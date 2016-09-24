@@ -6,5 +6,10 @@ if [ ! -d "$HOME/n" ]; then
 fi
 n latest --quiet # install latest version of node
 
+# Whether to add node to the PATH
+if [[ ! :$PATH: == *:"$HOME/n/bin":* ]] ; then
+    export PATH="$HOME/n/bin:$PATH"
+fi
+
 # Install NPM
 curl -L https://www.npmjs.com/install.sh | sh

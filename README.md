@@ -30,7 +30,7 @@ Have tips or changes? Submit a pull request.
 - Install PHP + php-version switcher.
 - Install Node.JS + n version switcher and NPM.
 
-## Not part of install script
+## Not part of the install script
 - Airwatch fix "reboot issue" script (not part of full installation).
 
 ### Full installation

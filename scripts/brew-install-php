@@ -14,7 +14,7 @@ brew install php70 --with-pear php70-xdebug php70-intl
 brew unlink php70
 
 brew link php71
-brew install php71 --with-pear php71-xdebug php71-intl§
+brew install php71 --with-pear php71-xdebug php71-intl
 
 php-version 71
 
