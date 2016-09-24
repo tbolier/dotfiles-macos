@@ -32,6 +32,6 @@ brew cask cleanup && brew cask update
 # Remove outdated versions from the cellars.
 brew cleanup && brew cask cleanup
 
-if [ -f "~/.zshrc" ]; then
-    source ~/.zshrc;
+if [ -f "$HOME/.zshrc" ]; then
+    source "$HOME/.zshrc";
 fi

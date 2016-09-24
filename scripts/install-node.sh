@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Node configuration
-if [ ! -d "~/n" ]; then
+if [ ! -d "$HOME/n" ]; then
     curl -L http://git.io/n-install | bash
 fi
 n latest --quiet # install latest version of node

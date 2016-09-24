@@ -31,5 +31,4 @@ brew install freetype jpeg libpng gd zlib
 brew install cask
 brew install gettext
 brew install libxml2
-brew install composer
 brew install openssl
