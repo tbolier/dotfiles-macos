@@ -71,7 +71,7 @@ brew install php71 --with-pear php71-xdebug php56-intl && pear install PHP_CodeS
 
 # Node configuration
 curl -L http://git.io/n-install | bash
-n latest # install latest version of node
+n latest --quiet # install latest version of node
 
 # Install NPM
 curl -L https://www.npmjs.com/install.sh | sh
