@@ -15,8 +15,12 @@ xcode-select --install
 # Remove outdated versions from the cellar.
 brew cleanup && brew cask cleanup
 
-# Make sure we’re using the latest Homebrew.
+# Make sure we’re using the latest updates.
 brew update && brew cask update
+
+brew tap homebrew/versions
+brew tap homebrew/dupes
+brew tap homebrew/homebrew-php
 
 # Upgrade any already-installed formulae.
 brew upgrade --all
@@ -33,13 +37,8 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 
-brew tap homebrew/versions
-
 # Install `wget` with IRI support.
 brew install wget --with-iri
-
-brew tap homebrew/dupes
-brew tap homebrew/homebrew-php
 brew install vim --override-system-vi
 brew install grep
 brew install openssh
@@ -70,8 +69,6 @@ brew unlink php70
 
 brew install php71 --with-pear php71-xdebug php56-intl && pear install PHP_CodeSniffer
 
-php-version 5 # switch to PHP5
-
 # Node configuration
 curl -L http://git.io/n-install | bash
 n latest # install latest version of node
@@ -79,7 +76,10 @@ n latest # install latest version of node
 # Install NPM
 curl -L https://www.npmjs.com/install.sh | sh
 
-# Install applications
+# Upgrade all existing casks
+./brew-cask-update.rb
+
+# Install missing casks
 brew cask install 1password
 brew cask install alfred appzapper
 brew cask install caffeine ccleaner
@@ -88,10 +88,10 @@ brew cask install google-chrome google-drive google-hangouts
 brew cask install iterm2
 brew cask install java
 brew cask install paw phpstorm
-brew cask install sequel-pro slack sourcetree spectacle spotify sublime-text
+brew cask install sequel-pro slack sourcetree spectacle sublime-text
 brew cask install the-unarchiver
 brew cask install vagrant virtualbox vnc-viewer
 brew cask install whatsapp
 
-# Remove outdated versions from the cellar.
+# Remove outdated versions from the cellar and cleanup
 brew cleanup && brew cask cleanup
