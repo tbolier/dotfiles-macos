@@ -4,7 +4,7 @@
 	required = true
 [user]
 	name = Timon Bolier
-	email = t.bolier@coolblue.nl
+	email = timonb@gmail.com
 [credential]
 	helper = osxkeychain
 [url "git@github.com:"]

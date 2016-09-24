@@ -2,7 +2,10 @@
 # -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8)
 export LC_CTYPE="en_US.UTF-8"
 
+# Add to current shell
 source $(brew --prefix php-version)/php-version.sh
+
+# Aliases
 
 # Composer
 alias cinstall='composer install'
