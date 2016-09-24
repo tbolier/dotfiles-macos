@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "$0")/../files";
 
 git pull origin master;
 
@@ -20,4 +20,4 @@ else
 fi;
 unset doIt;
 
-source ~/.bash_profile;
+cd $PWD;
