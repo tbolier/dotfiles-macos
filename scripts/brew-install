@@ -25,6 +25,7 @@ brew install openssh
 brew install screen
 brew install zsh zsh-completions
 brew install git
+brew install hub
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install autoconf
 brew install freetype jpeg libpng gd zlib
