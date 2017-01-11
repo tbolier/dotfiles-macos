@@ -10,6 +10,5 @@ brew cask install iterm2
 brew cask install java
 brew cask install paw phpstorm
 brew cask install sequel-pro slack sourcetree spectacle sublime-text
-brew cask install the-unarchiver
 brew cask install vagrant virtualbox vnc-viewer
 brew cask install whatsapp
