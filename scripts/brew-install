@@ -29,7 +29,6 @@ brew install hub
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install autoconf
 brew install freetype jpeg libpng gd zlib
-brew install cask
 brew install gettext
 brew install libxml2
 brew install openssl

@@ -4,7 +4,7 @@
 CASKROOM = '/usr/local/Caskroom/'
 
 # Brew / cask cleanup & update
-system("brew cleanup && brew cask cleanup && brew update && brew cask update")
+system("brew cleanup && brew cask cleanup && brew update")
 
 # Go through installed casks.
 Dir.foreach(CASKROOM) do |cask_name|
@@ -33,8 +33,8 @@ Dir.foreach(CASKROOM) do |cask_name|
   next if installed_versions.include?(newest_version)
 
   # Install newest version if it's not already installed.
-  system("brew cask uninstall #{cask_name}")
-  system("brew cask install #{cask_name}")
+  system("brew cask zap #{cask_name}")
+  system("brew cask install #{cask_name} --force")
 end
 
 system("brew cleanup && brew cask cleanup")
