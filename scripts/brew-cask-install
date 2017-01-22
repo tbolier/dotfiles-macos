@@ -2,7 +2,7 @@
 
 # Install missing casks
 brew cask install 1password
-brew cask install alfred appzapper
+brew cask install alfred appcleaner
 brew cask install caffeine ccleaner
 brew cask install dash datagrip
 brew cask install google-chrome google-drive google-hangouts
