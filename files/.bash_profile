@@ -23,8 +23,8 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 # Git
 alias branch='git rev-parse --abbrev-ref HEAD'
-alias rebase='function(){git fetch --all;git rebase -i $1}'
-alias fetch='function(){git fetch --all}'
+alias rebase='function(){git fetch $i;git rebase -i $1}'
+alias fetch='function(){git fetch -all}'
 alias commit='_gitCommit'
 
 _gitCommit ()
