@@ -6,7 +6,7 @@ export LC_CTYPE="en_US.UTF-8"
 export PATH="$HOME/n/bin:$PATH"
 
 # Add to current shell
-source $(brew --prefix php-version)/php-version.sh && php-version 5
+source $(brew --prefix php-version)/php-version.sh
 
 # Aliases
 
