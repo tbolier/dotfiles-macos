@@ -7,7 +7,7 @@ where:
     directory  the directory to find git repositories in
     remote  the remote git repository to fetch from and rebase on"
 
-while getopts ':hs:' option; do
+while getopts ':h:' option; do
   case "$option" in
     h) echo "$usage"
        exit
