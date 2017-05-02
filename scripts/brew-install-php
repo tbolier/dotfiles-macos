@@ -6,7 +6,7 @@ brew unlink php71
 brew install php-version
 
 brew link php71
-brew install php71 --with-pear php71-xdebug php71-intl php71-memcached
+brew install php71 --with-pear php71-xdebug php71-intl php71-memcached php71-igbinary php71-imagick
 
 php-version 71
 
