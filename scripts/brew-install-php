@@ -12,3 +12,4 @@ php-version 71
 
 brew install composer
 brew install php-code-sniffer
+brew install phpmd
