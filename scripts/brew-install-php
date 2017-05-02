@@ -11,4 +11,4 @@ brew install php71 --with-pear php71-xdebug php71-intl php71-memcached php71-igb
 php-version 71
 
 brew install composer
-pear install PHP_CodeSniffer
+brew install php-code-sniffer
