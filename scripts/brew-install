@@ -1,7 +1,3 @@
-brew tap homebrew/versions
-brew tap homebrew/dupes
-brew tap homebrew/homebrew-php
-
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
