@@ -33,7 +33,7 @@ _gitCommit ()
     fi
 
     if [ ! -z "$issueKey" ]; then
-        git commit -m "[${issueKey}] ${1}"
+        git commit -m "${issueKey} ${1}"
     else
         git commit -m "${1}"
     fi
