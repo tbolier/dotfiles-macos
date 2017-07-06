@@ -23,7 +23,7 @@ brew cleanup && brew update
 ./scripts/install-node
 
 # Remove outdated casks from the cellar and update cask.
-brew cask cleanup && brew cask update
+brew cask cleanup
 
 # Upgrade all existing casks
 ./scripts/brew-cask-update
