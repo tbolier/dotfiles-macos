@@ -18,17 +18,15 @@ brew install findutils
 brew install gnu-sed --with-default-names
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
-brew install vim --override-system-vi
-brew install grep
-brew install openssh
-brew install screen
-brew install zsh zsh-completions
-brew install git
-brew install hub
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install autoconf
+brew install ansible autoconf
+brew install gettext git git-flow grep
 brew install freetype jpeg libpng gd zlib
-brew install gettext
+brew install htop hub
 brew install libxml2
-brew install openssl
+brew install netcat
+brew install openssh openssl
+brew install pass
+brew install screen
+brew install vim --override-system-vi
+brew install wget --with-iri
+brew install zsh zsh-completions
