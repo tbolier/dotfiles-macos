@@ -1,0 +1,9 @@
+if [[ ! -d `~/.vim_runtime` ]]; then
+    git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+    sh ~/.vim_runtime/install_awesome_vimrc.sh
+else
+    cd ~/.vim_runtime
+    git pull --rebase
+fi
+
+
