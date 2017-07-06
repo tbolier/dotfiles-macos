@@ -21,13 +21,16 @@ brew cleanup && brew update
 ./scripts/brew-install
 ./scripts/brew-install-php
 ./scripts/install-node
+./scripts/install-ultimate-vim
 
 # Remove outdated casks from the cellar and update cask.
 brew cask cleanup
 
+# Install all casks
+./scripts/brew-cask-install
+
 # Upgrade all existing casks
 ./scripts/brew-cask-update
-./scripts/brew-cask-install
 
 # Remove outdated versions from the cellars.
 brew cleanup && brew cask cleanup
