@@ -4,6 +4,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 # Add to PATH
 export PATH="$HOME/n/bin:$PATH"
+export PATH=/Library/Frameworks/Mono.framework/Versions/Current/bin/:${PATH}
 
 # Add to current shell
 source $(brew --prefix php-version)/php-version.sh
@@ -53,6 +54,8 @@ alias prod_web4="ssh aroot@80.95.166.129"
 alias staging="ssh root@staging.acsi.lan"
 alias testing="ssh root@test.acsi.lan"
 alias dev="ssh root@dev.acsi.lan"
+alias solr1="ssh acsi@80.95.166.130"
+alias solr2="ssh acsi@80.95.166.131"
 alias jenkins="ssh root@ci.acsi.lan"
 alias magento="ssh acsi@80.95.166.56"
 alias cache1="ssh acsi@80.95.166.49"
@@ -63,6 +66,7 @@ alias db2="ssh aroot@80.95.166.140"
 alias redmine="ssh michelm@172.16.20.80"
 alias wiki="ssh michelm@wiki.acsi.lan"
 alias ccc="ssh michelm@ccc.acsi.lan"
-alias dev_old="ssh root@jeep"
+alias dev_old1="ssh root@172.16.20.227" # jeep
+alias dev_old2="ssh root@172.16.20.229" # jeep2
 alias test_old="ssh root@hummer"
 alias china="ssh acsi@42.159.147.94"
