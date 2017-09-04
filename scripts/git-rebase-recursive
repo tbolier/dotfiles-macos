@@ -24,13 +24,17 @@ while getopts ':h:' option; do
 done
 shift $((OPTIND - 1))
 
-for d in $1 ; do
-    echo "$d"
+for d in $1/* ; do
+    PROJECT=$(basename "$d")
+    echo "$PROJECT rebase attempt in progess..."
     cd "$d"
-    git remote remove $2
-    git remote add $2 "git@github.com:coolblue-development/$d.git"
-    git fetch $2
-    git rebase $2/master
-    git push origin
+    if [ -d "$d/.git" ]; then
+	echo "Git repository found."
+        git checkout master
+	git fetch $2
+        git rebase $2/master
+    else
+	echo "No git repository found."
+    fi
     cd ".."
 done
