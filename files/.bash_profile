@@ -68,5 +68,5 @@ alias wiki="ssh michelm@wiki.acsi.lan"
 alias ccc="ssh michelm@ccc.acsi.lan"
 alias dev_old1="ssh root@172.16.20.227" # jeep
 alias dev_old2="ssh root@172.16.20.229" # jeep2
-alias test_old="ssh root@hummer"
+alias test_old="ssh root@172.16.20.230" # hummer
 alias china="ssh acsi@42.159.147.94"
