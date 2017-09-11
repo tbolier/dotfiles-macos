@@ -25,6 +25,9 @@ alias rebase='function(){git fetch origin master;git rebase -i $1}'
 alias fetch='function(){git fetch -all}'
 alias commit='_gitCommit'
 
+# Rar
+alias unrar-files='find . -name "*.rar" -exec unrar x -o+ {} \;'
+
 _gitCommit ()
 {
     issueKey="${$(branch)##*/}"
