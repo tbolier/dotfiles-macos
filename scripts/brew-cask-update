@@ -4,7 +4,7 @@
 CASKROOM = '/usr/local/Caskroom/'
 
 # Brew / cask cleanup & update
-system("rm -rf \"$(brew --cache)\" && brew cleanup && brew cask cleanup && brew update")
+system("brew cleanup --force -s && rm -rf $(brew --cache) && brew cask cleanup && brew update")
 
 # Go through installed casks.
 Dir.foreach(CASKROOM) do |cask_name|
