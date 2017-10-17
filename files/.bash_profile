@@ -7,6 +7,7 @@ export PATH="$HOME/n/bin:$PATH"
 export PATH=/Library/Frameworks/Mono.framework/Versions/Current/bin/:${PATH}
 
 # Add to current shell
+source ~/.fonts/*.sh
 source $(brew --prefix php-version)/php-version.sh
 
 # Aliases
@@ -25,9 +26,6 @@ alias rebase='function(){git fetch origin master;git rebase -i $1}'
 alias fetch='function(){git fetch -all}'
 alias commit='_gitCommit'
 
-# Rar
-alias unrar-files='find . -name "*.rar" -exec unrar x -o+ {} \;'
-
 _gitCommit ()
 {
     issueKey="${$(branch)##*/}"
@@ -43,13 +41,15 @@ _gitCommit ()
     fi
 }
 
+# VPN
+alias vpn="sudo openfortivpn -c ~/.openfortivpn"
+
 # Projects
 alias projects='cd ~/Projects'
 
 # Zend commands
 alias zend-clean-cache='find ./data -name "*.php" -type f -print0 | xargs -0 /bin/rm -f'
 
-# Acsi ssh
 alias prod_web1="ssh acsi@80.95.166.51"
 alias prod_web2="ssh acsi@80.95.166.52"
 alias prod_web3="ssh acsi@80.95.166.55"
@@ -69,7 +69,10 @@ alias db2="ssh aroot@80.95.166.140"
 alias redmine="ssh michelm@172.16.20.80"
 alias wiki="ssh michelm@wiki.acsi.lan"
 alias ccc="ssh michelm@ccc.acsi.lan"
-alias dev_old1="ssh root@172.16.20.227" # jeep
-alias dev_old2="ssh root@172.16.20.229" # jeep2
+alias jeep="ssh root@172.16.20.229" # jeep
+alias jeep2="ssh root@172.16.20.227" # jeep2
 alias test_old="ssh root@172.16.20.230" # hummer
 alias china="ssh acsi@42.159.147.94"
+
+# Mounting projects
+alias mount_controlpanel="sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.229:/data/www/controlpanel.acsi.eu ~/Projects/jeep/controlpanel.acsi.eu && sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.229:/data/www/lib ~/Projects/jeep/lib"

@@ -1,0 +1,8 @@
+host = mail.acsi.eu
+port = 443
+username = TimonB
+password = 
+set-dns = 1
+set-routes = 1
+# X509 certificate sha256 sum, trust only this one!
+trusted-cert = 2341fae269af7185635446c874675e9843fdbffb3140fdf593609f3ae44b6ba4
