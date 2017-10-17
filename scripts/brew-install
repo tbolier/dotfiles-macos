@@ -19,10 +19,12 @@ brew install gettext git git-flow grep
 brew install freetype jpeg libpng gd zlib
 brew install htop hub
 brew install libxml2
+brew install mitmproxy
 brew install netcat
-brew install openssh openssl
+brew install openfortivpn openssh openssl
 brew install pass
 brew install screen
+brew install thefuck
 brew install vim --override-system-vi
 brew install wget --with-iri
 brew install zsh zsh-completions
