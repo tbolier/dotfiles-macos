@@ -50,6 +50,7 @@ alias projects='cd ~/Projects'
 # Zend commands
 alias zend-clean-cache='find ./data -name "*.php" -type f -print0 | xargs -0 /bin/rm -f'
 
+alias loadbalancer="echo 80.95.165.151"
 alias prod_web1="ssh acsi@80.95.166.51"
 alias prod_web2="ssh acsi@80.95.166.52"
 alias prod_web3="ssh acsi@80.95.166.55"
@@ -69,8 +70,10 @@ alias db2="ssh aroot@80.95.166.140"
 alias redmine="ssh michelm@172.16.20.80"
 alias wiki="ssh michelm@wiki.acsi.lan"
 alias ccc="ssh michelm@ccc.acsi.lan"
-alias jeep="ssh root@172.16.20.229" # jeep
-alias jeep2="ssh root@172.16.20.227" # jeep2
+alias jeep_dev_source="ssh root@172.16.20.229" # jeep source code
+alias jeep_dev_mysql="ssh root@172.16.20.227" # jeep mysql server
+alias mini_test_source="ssh root@172.16.20.230" # mini source code 
+alias mini_test_mysql="ssh root@172.16.20.231" # mini mysql server
 alias test_old="ssh root@172.16.20.230" # hummer
 alias china="ssh acsi@42.159.147.94"
 
