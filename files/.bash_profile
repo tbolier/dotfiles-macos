@@ -5,10 +5,11 @@ export LC_CTYPE="en_US.UTF-8"
 # Add to PATH
 export PATH="$HOME/n/bin:$PATH"
 export PATH=/Library/Frameworks/Mono.framework/Versions/Current/bin/:${PATH}
+export PHP_VERSIONS="$HOME/local/php $HOME/php/versions"
 
 # Add to current shell
 source ~/.fonts/*.sh
-source $(brew --prefix php-version)/php-version.sh
+source $(brew --prefix php-version)/php-version.sh && php-version 7
 
 # Aliases
 
