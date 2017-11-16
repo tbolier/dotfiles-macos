@@ -14,6 +14,7 @@ source ~/.fonts/*.sh
 source $(brew --prefix php-version)/php-version.sh && php-version 7
 
 # Aliases
+alias timereg="toggl2redmine time-entry-sync";
 
 # Composer
 alias cinstall='composer install'
@@ -75,7 +76,7 @@ alias wiki="ssh michelm@wiki.acsi.lan"
 alias ccc="ssh michelm@ccc.acsi.lan"
 alias jeep_dev_source="ssh root@172.16.20.229" # jeep source code
 alias jeep_dev_mysql="ssh root@172.16.20.227" # jeep mysql server
-alias mini_test_source="ssh root@172.16.20.230" # mini source code 
+alias mini_test_source="ssh root@172.16.20.230" # mini source code
 alias mini_test_mysql="ssh root@172.16.20.231" # mini mysql server
 alias test_old="ssh root@172.16.20.230" # hummer
 alias china="ssh acsi@42.159.147.94"
