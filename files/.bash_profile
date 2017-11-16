@@ -4,8 +4,10 @@ export LC_CTYPE="en_US.UTF-8"
 
 # Add to PATH
 export PATH="$HOME/n/bin:$PATH"
-export PATH=/Library/Frameworks/Mono.framework/Versions/Current/bin/:${PATH}
-export PHP_VERSIONS="$HOME/local/php $HOME/php/versions"
+export PATH="/Library/Frameworks/Mono.framework/Versions/Current/bin/:${PATH}"
+export PATH="/usr/local/share/dotnet:$PATH"
+export PHP_VERSIONS="$HOME/local/php $HOME"
+export ANSIBLE_VAULT_PASSWORD_FILE="~/.vault_pass.txt"
 
 # Add to current shell
 source ~/.fonts/*.sh
@@ -77,6 +79,7 @@ alias mini_test_source="ssh root@172.16.20.230" # mini source code
 alias mini_test_mysql="ssh root@172.16.20.231" # mini mysql server
 alias test_old="ssh root@172.16.20.230" # hummer
 alias china="ssh acsi@42.159.147.94"
+alias cdn="ssh aroot@80.95.166.135" # content.acsi.eu
 
 # Mounting projects
 alias mount_controlpanel="sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.229:/data/www/controlpanel.acsi.eu ~/Projects/jeep/controlpanel.acsi.eu && sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.229:/data/www/lib ~/Projects/jeep/lib"
