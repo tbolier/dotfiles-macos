@@ -33,8 +33,7 @@ Dir.foreach(CASKROOM) do |cask_name|
   next if installed_versions.include?(newest_version)
 
   # Install newest version if it's not already installed.
-  system("brew cask zap #{cask_name}")
-  system("brew cask install #{cask_name} --force")
+  system("brew cask reinstall #{cask_name} --force")
 end
 
 system("brew cleanup && brew cask cleanup")
