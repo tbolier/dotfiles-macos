@@ -1,6 +1,4 @@
 #!/bin/bash
-# Update all git directories below current directory or specified directory
-# Skips directories that contain a file called .ignore
 
 function migrate {
   local d="$1"
