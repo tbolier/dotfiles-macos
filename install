@@ -15,6 +15,10 @@ xcode-select --install
 # Install dotfiles
 ./scripts/dotfiles --force
 
+# Install git scripts
+cp ./scripts/git-rebase-recursive ~/git-rebase-recursive
+cp ./scripts/git-diff-recursive ~/git-diff-recursive
+
 # Remove outdated versions from the cellar and update brew.
 brew cleanup && brew update
 
