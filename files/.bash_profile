@@ -11,10 +11,10 @@ export ANSIBLE_VAULT_PASSWORD_FILE="~/.vault_pass.txt"
 
 # Add to current shell
 source ~/.fonts/*.sh
-source $(brew --prefix php-version)/php-version.sh && php-version 7
 
 # Aliases
-alias timereg="toggl2redmine time-entry-sync";
+alias timereg="php ~/Projects/toggle-jira/bin/toggljira.php sync"
+alias timereg_redmine="toggl2redmine time-entry-sync"
 
 # Composer
 alias cinstall='composer install'
