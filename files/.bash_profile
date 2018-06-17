@@ -1,5 +1,8 @@
 # OSX Lion ssh logon:
-ssh-add -k ~/.ssh/id_rsa
+if ! ssh-add -l | \
+    grep -q "$(ssh-keygen -lf ~/.ssh/id_rsa.pub | awk '{print $2}')"; \
+    then ssh-add -k ~/.ssh/id_rs; \
+fi
 
 # -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8)
 export LC_CTYPE="en_US.UTF-8"
@@ -15,7 +18,7 @@ export ANSIBLE_VAULT_PASSWORD_FILE="~/.vault_pass.txt"
 source ~/.fonts/*.sh
 
 # Aliases
-alias timereg="php ~/Projects/toggle-jira/bin/toggljira.php sync"
+alias timereg="php ~/Projects/toggl-jira/bin/toggljira.php sync"
 alias timereg_redmine="toggl2redmine time-entry-sync"
 
 # Composer
@@ -28,6 +31,7 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 # Git
 alias branch='git rev-parse --abbrev-ref HEAD'
+alias branch-prune-merged="git fetch --all > /dev/null | git branch  --merged origin/develop | grep -ve '^[ *]\sdevelop$'  | grep -ve '^[ *]\srelease$' | grep -ve '^[ *]\smaster$' > /tmp/merged-branches && vi /tmp/merged-branches && xargs git branch -d < /tmp/merged-branches"
 alias rebase='function(){git fetch origin;git rebase -i $1}'
 alias rebase-recursive='~/git-rebase-recursive'
 alias fetch='function(){git fetch -all}'
@@ -85,6 +89,7 @@ alias mini_test_mysql="ssh root@172.16.20.231" # mini mysql server
 alias test_old="ssh root@172.16.20.230" # hummer
 alias china="ssh acsi@42.159.147.94"
 alias cdn="ssh aroot@80.95.166.135" # content.acsi.eu
+alias worker="ssh acsi@80.95.166.132"
 
 # Mounting projects
 alias mount_controlpanel="sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.229:/data/www/controlpanel.acsi.eu ~/Projects/jeep/controlpanel.acsi.eu && sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.229:/data/www/lib ~/Projects/jeep/lib"
