@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+usage="$(basename "$0") [-h] [directory] [remote] -- rebase all git repositories and push to origin
+
+where:
+    -h  show this help text
+    directory  the directory to find git repositories in
+    remote  the remote git repository to fetch from and rebase on"
+
+while getopts ':h:' option; do
+  case "$option" in
+    h) echo "$usage"
+       exit
+       ;;
+    :) printf "missing argument for -%s\n" "$OPTARG" >&2
+       echo "$usage" >&2
+       exit 1
+       ;;
+   \?) printf "illegal option: -%s\n" "$OPTARG" >&2
+       echo "$usage" >&2
+       exit 1
+       ;;
+  esac
+done
+shift $((OPTIND - 1))
+
+for d in $1/* ; do
+    PROJECT=$(basename "$d")
+    echo "$PROJECT rebase attempt in progess..."
+    cd "$d"
+    if [ -d "$d/.git" ]; then
+	echo "Git repository found."
+        git checkout master
+	git fetch $2
+        git rebase $2/master
+    else
+	echo "No git repository found."
+    fi
+    cd ".."
+done

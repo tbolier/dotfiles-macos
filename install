@@ -16,8 +16,8 @@ xcode-select --install
 ./scripts/dotfiles --force
 
 # Install git scripts
-cp ./scripts/git-rebase-recursive ~/git-rebase-recursive
-cp ./scripts/git-diff-recursive ~/git-diff-recursive
+cp ./scripts/git/* ~/
+cp ./scripts/phpstorm/* ~/
 
 # Remove outdated versions from the cellar and update brew.
 brew cleanup && brew update
@@ -26,15 +26,6 @@ brew cleanup && brew update
 ./scripts/brew-install-php
 ./scripts/install-node
 ./scripts/install-ultimate-vim
-
-# Remove outdated casks from the cellar and update cask.
-brew cask cleanup
-
-# Install all casks
-./scripts/brew-cask-install
-
-# Upgrade all existing casks
-./scripts/brew-cask-update
 
 # Remove outdated versions from the cellars.
 brew cleanup && brew cask cleanup

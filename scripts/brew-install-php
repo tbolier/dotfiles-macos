@@ -1,18 +1,13 @@
 #!/usr/bin/env bash
 
-brew tap homebrew/homebrew-php
+brew install php@7.1
 
-# PHP Configuation
-brew unlink php71
+echo 'export PATH="/usr/local/opt/php@7.1/bin:$PATH"' >> ~/.php@7.1
+echo 'export PATH="/usr/local/opt/php@7.1/sbin:$PATH"' >> ~/.php@7.1
 
-brew install php-version
+brew link php@7.1
 
-brew link php71
-brew install php71 --with-pear php71-xdebug php71-intl php71-memcached php71-igbinary php71-imagick php71-mongodb
-
-php-version 71
-
-brew install composer
-brew install php-code-sniffer
-brew install phpmd
-brew install imagemagick
+pecl install imagick
+pecl install intl
+pecl install xdebug
+pecl install mongodb

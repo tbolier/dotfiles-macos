@@ -1,30 +1,58 @@
-# Upgrade any already-installed formulae.
-brew upgrade --all
+#!/usr/bin/env bash
+
+# Clean-up brew
+brew cleanup
+brew cask cleanup
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-# Install some other useful utilities like `sponge`.
-brew install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 
-# Install `wget` with IRI support.
-brew install ansible autoconf
-brew install gettext git git-flow grep
-brew install freetype jpeg libpng gd zlib
-brew install htop hub
-brew install libxml2
-brew install mitmproxy
-brew install netcat
-brew install openfortivpn openssh openssl
-brew install pass
-brew install screen
-brew install thefuck
-brew install vim --override-system-vi
-brew install wget --with-iri
-brew install zsh zsh-completions
+brew install \
+ adns freetype hicolor-icon-theme libunistring pandoc screen \
+ ansible fribidi htop libusb pango siege \
+ ant gd hub libxml2 pass sqlite \
+ apr gdbm icu4c libyaml pcre sshfs \
+ apr-util gdk-pixbuf imagemagick libzip perl the_silver_searcher \
+ argon2 gettext jpeg lsof thefuck \
+ aspell git libassuan makedepend tinyxml2 \
+ atk git-flow libepoxy mcrypt tmux \
+ autoconf glib libevent tree \
+ automake gmp libffi mhash pinentry unixodbc \
+ bison@2.7 gnome-doc-utils libgcrypt mitmproxy pixman unzip \
+ cairo gnu-getopt libgpg-error moreutils pkg-config vim \
+ composer libidn2 netcat protobuf webp \
+ coreutils gnupg libksba nettle python wget \
+ curl gnutls node python3 xclip \
+ dnsmasq gobject-introspection  libpng npth python@2 xz \
+ docbook graphite2 libpq openfortivpn qrencode zenity \
+ findutils grep libsodium openssh rarian zlib \
+ flex gsettings-desktop-schemas libtasn1 openssl re2c zsh \
+ fontconfig gtk+3 libtiff openssl@1.1 readline zsh-completions \
+ freetds harfbuzz libtool p11-kit ruby
+
+# Remove outdated casks from the cellar and update cask.
+brew cask install \
+ 1password firefox osxfuse studio-3t \
+ airmail-beta flux phpstorm sublime-text \
+ alfred geekbench plex-media-server teamviewer \
+ appcleaner google-chrome reqlpro toggl \
+ avg-antivirus google-drive robomongo vagrant \
+ beyond-compare insomnia sequel-pro virtualbox \
+ caffeine install-disk-creator skype visual-studio \
+ ccleaner iterm2 slack vlc \
+ dash java soapui vnc-viewer \
+ dotnet-preview keeweb sourcetree whatsapp \
+ dotnet-sdk libreoffice spectacle xquartz \
+ dotnet-sdk-preview mono-mdk spotify yammer \
+ duet opera stride
+
+# Upgrade any already-installed formulae.
+brew upgrade
+
+# Update any already installed utility or cask
+brew update
