@@ -1,6 +1,6 @@
 # Timon’s dotfiles
 
-Welcome to my dotfiles.<br />
+Welcome to my dotfiles.
 Feel free to use, but before you do read this README.
 
 Have tips or changes? Submit a pull request.
@@ -32,9 +32,6 @@ Have tips or changes? Submit a pull request.
 - Update script for installed brew casks.
 - Install PHP.
 - Install Node.JS + n version switcher and NPM.
-
-## Not part of the install script
-- Airwatch fix "reboot issue" script (not part of full installation).
 
 ### Full installation
 ```bash
