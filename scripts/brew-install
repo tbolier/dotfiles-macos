@@ -51,6 +51,9 @@ brew cask install \
  dotnet-sdk-preview mono-mdk spotify yammer \
  duet opera stride
 
+brew tap caskroom/fonts
+brew cask install font-hack-nerd-font
+
 # Upgrade any already-installed formulae.
 brew upgrade
 
