@@ -35,3 +35,5 @@ alias acsi-mount-controlpanel="sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.2
 
 # VPN
 alias acsi-vpn="sudo openfortivpn -c ~/.openfortivpn"
+alias acsi-vpn-routes="sudo /sbin/route add -net 80.95.165.0/24 -interface ppp0 && sudo /sbin/route add -net 80.95.166.0/24 -interface ppp0"
+alias acsi-vpn-routes-delete="sudo /sbin/route delete -net 80.95.165.0/24 -interface ppp0 && sudo /sbin/route delete -net 80.95.166.0/24 -interface ppp0"
