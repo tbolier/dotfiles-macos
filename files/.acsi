@@ -1,37 +1,37 @@
 # INTERMAX LB
-alias loadbalancer="echo 80.95.165.151"
+alias acsi-loadbalancer="echo 80.95.165.151"
 
 # INTERMAX WEB
-alias prod_web1="ssh acsi@80.95.166.51"
-alias prod_web2="ssh acsi@80.95.166.52"
-alias prod_web4="ssh aroot@80.95.166.129"
-alias solr1="ssh acsi@80.95.166.130"
-alias solr2="ssh acsi@80.95.166.140"
+alias acsi-web1="ssh acsi@80.95.166.51"
+alias acsi-web2="ssh acsi@80.95.166.52"
+alias acsi-web4="ssh aroot@80.95.166.129"
+alias acsi-solr1="ssh acsi@80.95.166.130"
+alias acsi-solr2="ssh acsi@80.95.166.140"
 alias acsi-cache="ssh acsi@80.95.166.50"
-alias shared01="ssh acsi@80.95.166.57" # wordpress
+alias acsi-shared01="ssh acsi@80.95.166.57" # wordpress
 alias acsi-db1="ssh acsi@80.95.166.133"
 alias acsi-db2="ssh acsi@80.95.166.134"
-alias cdn="ssh aroot@80.95.166.136" # content.acsi.eu
-alias acsi_eu="ssh acsi@80.95.166.132"
-alias rabbitmq="ssh acsi@80.95.166.139"
+alias acsi-cdn="ssh aroot@80.95.166.136" # content.acsi.eu
+alias acsi-eu="ssh acsi@80.95.166.132"
+alias acsi-rabbitmq="ssh acsi@80.95.166.139"
 
 # ACSI OFFICE
-alias jenkins="ssh root@ci.acsi.lan"
-alias dev-db="ssh root@dev.acsi.lan"
-alias testing="ssh root@test.acsi.lan"
-alias staging="ssh root@staging.acsi.lan"
-alias staging-docker="ssh root@172.16.20.66"
-alias redmine="ssh michelm@172.16.20.80"
-alias wiki="ssh michelm@wiki.acsi.lan"
-alias ccc="ssh michelm@ccc.acsi.lan"
-alias jeep_dev_source="ssh root@172.16.20.229" # jeep source code
-alias jeep_dev_mysql="ssh root@172.16.20.227" # jeep mysql server
-alias mini_test_source="ssh root@172.16.20.230" # mini source code
-alias mini_test_mysql="ssh root@172.16.20.231" # mini mysql server
-alias china="ssh acsi@42.159.147.94"
+alias acsi-jenkins="ssh root@ci.acsi.lan"
+alias acsi-dev-db="ssh root@dev.acsi.lan"
+alias acsi-test="ssh root@test.acsi.lan"
+alias acsi-staging="ssh root@staging.acsi.lan"
+alias acsi-staging-docker="ssh root@172.16.20.66"
+alias acsi-redmine="ssh michelm@172.16.20.80"
+alias acsi-wiki="ssh michelm@wiki.acsi.lan"
+alias acsi-ccc="ssh michelm@ccc.acsi.lan"
+alias acsi-jeep-dev="ssh root@172.16.20.229" # jeep source code
+alias acsi-jeep-dev-mysql="ssh root@172.16.20.227" # jeep mysql server
+alias acsi-mini-test="ssh root@172.16.20.230" # mini source code
+alias acsi-mini-test-mysql="ssh root@172.16.20.231" # mini mysql server
+alias acsi-china="ssh acsi@42.159.147.94"
 
 # Mounting legacy Projects
-alias mount_controlpanel="sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.230:/data/www/controlpanel.acsi.eu ~/Projects/legacy/controlpanel.acsi.eu && sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.230:/data/www/lib ~/Projects/legacy/lib"
+alias acsi-mount-controlpanel="sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.230:/data/www/controlpanel.acsi.eu ~/Projects/legacy/controlpanel.acsi.eu && sshfs -o IdentityFile=~/.ssh/id_rsa root@172.16.20.230:/data/www/lib ~/Projects/legacy/lib"
 
 # VPN
-alias vpn="sudo openfortivpn -c ~/.openfortivpn"
+alias acsi-vpn="sudo openfortivpn -c ~/.openfortivpn"
